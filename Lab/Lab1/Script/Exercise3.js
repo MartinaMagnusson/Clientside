@@ -2,7 +2,11 @@
 
 function skrivUtSumman() {
     var tal = document.getElementById('tal').value;
-    document.getElementById('summa2').innerHTML = räknaUtSumman(tal);
+    if (isNaN(tal)) 
+        document.getElementById('summa2').innerHTML = räknaUtSumman(tal);
+    else
+        document.getElementById('summa2').innerHTML = "Skriv in ett nummer";
+        
 }
 
 function räknaUtSumman(tal) {

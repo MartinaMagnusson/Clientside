@@ -3,7 +3,10 @@ var brutto = document.getElementById('brutto').innerHTML;
 
 function bruttoLön() {
     var försäljning = document.getElementById("försäljningssumman").value;
-    document.getElementById("lön").innerHTML = Calculate(brutto, försäljning);
+    if(isNaN(försäljning))
+        document.getElementById("lön").innerHTML = Calculate(brutto, försäljning);
+    else
+        document.getElementById("lön").innerHTML = "Skriv in ett tal";
 }
 
 function Calculate(brutto, försäljning) {

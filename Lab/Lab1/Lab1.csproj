@@ -80,6 +80,7 @@
     <Content Include="Script\Exercise2.js" />
     <Content Include="Script\Exercise3.js" />
     <Content Include="Script\Exercise4.js" />
+    <Content Include="Script\Exercise5.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
