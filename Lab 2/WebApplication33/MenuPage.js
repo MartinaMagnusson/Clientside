@@ -18,6 +18,19 @@ function GetPrice(price) {
 }
 
 /*Add pictures function to span:*/
+var span = document.getElementsByTagName('span');
+for (var i = 0; i < span.length; i++) {
+    span[i] = addPictures(span[i]);
+}
+
+function addPictures(element) {
+    var img = document.createElement('img');
+    img.src = 'Images/Hamburger.png';
+    element.innerHTML = null;
+    element.appendChild(img);
+}
+
+
 
 /*Add todays offer function. 
 Make price background red. 
