@@ -8,8 +8,8 @@ function skrivUtSvar() {
 function jämnaTal(maxTal) {
     var tal = '';
     for (var i = 1; i <= maxTal; i++) {
-        if (i % 2 == 0)
-            if (i != 100)
+        if (i % 2 === 0)
+            if (i !== 100)
                 tal += String(i + ', ');
             else 
                 tal += String(i);
