@@ -30,8 +30,6 @@ function addPictures(element) {
     element.appendChild(img);
 }
 
-
-
 /*Add todays offer function. 
 Make price background red. 
 Reduce price by another 20%:*/
