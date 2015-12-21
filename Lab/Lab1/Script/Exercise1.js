@@ -7,5 +7,5 @@ function bruttoLön() {
 }
 
 function Calculate(brutto, försäljning) {
-    return Number(brutto) + (Number(försäljning) - (Number(försäljning) * 0.91));
+    return Number(brutto) + (Number(försäljning) * 0.09);
 }
