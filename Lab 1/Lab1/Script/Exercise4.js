@@ -2,10 +2,7 @@
 
 function skrivUtSumman() {
     var pris = document.getElementById("pris").value;
-    if (isNaN(pris))
-        document.getElementById("att_betala").innerHTML = räknaUtSumman(pris);
-    else
-        document.getElementById("att_betala").innerHTML = "Skriv in ett nummer";
+    document.getElementById("att_betala").innerHTML = räknaUtSumman(pris);
 }
 
 function räknaUtSumman(pris) {
