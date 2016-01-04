@@ -38,9 +38,15 @@ var listOfP = [
     new P("alert: ", 'click here'),
     new P("open: ", 'click here'),
     new P("print: ", 'click here'),
+
     new P("last Modified: ", 'click here'),
     new P("URL: ", 'click here'),
-    new P("domain: ", 'click here')
+    new P("domain: ", 'click here'),
+
+    new P("array: ", 'click here'),
+    new P("isNaN: ", 'click here'),
+
+    new P("Round numbers: ", 'click here'),
 ];
 
 //4.Add a stylesheet that displays the changed words in fat font and in red.
@@ -56,6 +62,18 @@ for (var i = 0; i < listOfP.length; i++) {
         p.setAttribute('id', 'openThis');
     if (listOfP[i].name === 'print: ')
         p.setAttribute('id', 'printThis');
+    if (listOfP[i].name === 'last Modified: ')
+        p.setAttribute('id', 'lastModified');
+    if (listOfP[i].name === 'URL: ')
+        p.setAttribute('id', 'url');
+    if (listOfP[i].name === 'domain: ')
+        p.setAttribute('id', 'domain');
+    if (listOfP[i].name === 'array: ')
+        p.setAttribute('id', 'array');
+    if (listOfP[i].name === 'isNaN: ')
+        p.setAttribute('id', 'isNaN');
+    if (listOfP[i].name === 'Round numbers: ')
+        p.setAttribute('id', 'roundNumbers');
 
     p.textContent = listOfP[i].name;
     span.textContent = listOfP[i].windowObject;
@@ -86,44 +104,70 @@ printThis.addEventListener('click', function (e) {
 /*### DOM page 126:###
 6. Play with the DOM-properties*/
 document.title = 'Menu';
-alert("lastModified: " + document.lastModified + '<br>');
-alert("URL: " + (document.url = 'Lab2'));
-alert("domain: " + document.domain);
+var lastModified = document.getElementById('lastModified');
+var url = document.getElementById('url');
+var domain = document.getElementById('domain');
+
+lastModified.addEventListener('click', function (e) {
+    alert("lastModified: " + document.lastModified);
+    e.stopPropagation();
+});
+url.addEventListener('click', function (e) {
+    alert("URL: " + (document.url = 'Lab2'));
+    e.stopPropagation();
+});
+domain.addEventListener('click', function (e) {
+    alert("domain: " + document.domain);
+    e.stopPropagation();
+});
 
 /*### String objects page 128, 129: ###
 7. Save the the text from the makeMeAnArray-paragraph into an array.*/
 var makeMeAnArray = "We have burgers, subs, pizza, and drinks";
 var myArray = makeMeAnArray.split(' ');
+var array = document.getElementById('array');
 //8. Use all the string methods and propertys allong with the array
-console.log('length: ' + makeMeAnArray.length);
-console.log('toUpperCase(): ' + makeMeAnArray.toUpperCase());
-console.log('toLocaleLowerCase(): ' + makeMeAnArray.toLocaleLowerCase());
-console.log('charAt(12): ' + makeMeAnArray.charAt(12));
-console.log('indexOf("zz"): ' + makeMeAnArray.indexOf('zz'));
-console.log('lastIndexOf("a"): ' + makeMeAnArray.lastIndexOf('a'));
-console.log('substring(8, 15): ' + makeMeAnArray.substring(8, 15));
-console.log('split(" "): ' +  makeMeAnArray.split(' '));
-console.log('trim(): ' + makeMeAnArray.trim());
-console.log('replace("s", "king"): ' + makeMeAnArray.replace('s', 'king'));
+array.addEventListener('click', function (e) {
+    alert('length: ' + makeMeAnArray.length);
+    alert('toUpperCase(): ' + makeMeAnArray.toUpperCase());
+    alert('toLocaleLowerCase(): ' + makeMeAnArray.toLocaleLowerCase());
+    alert('charAt(12): ' + makeMeAnArray.charAt(12));
+    alert('indexOf("zz"): ' + makeMeAnArray.indexOf('zz'));
+    alert('lastIndexOf("a"): ' + makeMeAnArray.lastIndexOf('a'));
+    alert('substring(8, 15): ' + makeMeAnArray.substring(8, 15));
+    alert('split(" "): ' + makeMeAnArray.split(' '));
+    alert('trim(): ' + makeMeAnArray.trim());
+    alert('replace("s", "king"): ' + makeMeAnArray.replace('s', 'king'));
+    e.stopPropagation();
+});
+
 
 /*### String objects page 132: ###
 9. check if the 4th element in the array is a number*/
-if (isNaN(makeMeAnArray[4]))
-    console.log("4th element in the array is not a number");
-else
-    console.log("4th element in the array is a number");
+var chechIfIsNaN = document.getElementById('isNaN');
+chechIfIsNaN.addEventListener('click', function (e) {
+    if (isNaN(makeMeAnArray[4]))
+        alert('4th element in the "We have burgers, subs, pizza, and drinks" is not a number');
+    else
+        alert('4th element in the "We have burgers, subs, pizza, and drinks" is a number');
+    e.stopPropagation();
+});
 
 /*### Math page 134: ###
 10. Round one of the numbers in the paragraph up/down*/
-var originalNumber = '102.23456';
-console.log(originalNumber);
-console.log(Math.ceil(originalNumber));
-console.log(Math.floor(originalNumber));
+var originalNumber = '10.23456';
+var numbers = document.getElementById('roundNumbers');
+numbers.addEventListener('click', function(e){
+    alert('Number:' +originalNumber);
+    alert('Math.ceil: ' + Math.ceil(originalNumber));
+    alert('Math.floor:' +Math.floor(originalNumber));
 
-//11. replace the 3rd word with PI then roud it to the nearest integer
-myArray[2] = Math.PI;
-myArray[2] = Math.round(myArray[2]);
-console.log(myArray);
+    //11. replace the 3rd word with PI then roud it to the nearest integer
+    myArray[2] = Math.PI;
+    myArray[2] = Math.round(myArray[2]);
+    alert('Math.round:' + myArray);
+    e.stopPropagation();
+});
 
 /*### Date object###
 12. Calculate how many days it's until your birthday and present it.*/
@@ -149,7 +193,7 @@ getDaysUntilMyBirthday();
 //13. Calculate how many minutes old you are and present it.
 function getAge(dateString) {
     var birthDate = new Date(dateString);
-    var minnutes = ((today.getFullYear() - birthDate.getFullYear()) * oneYesr)/ 1000;
+    var minnutes = ((today.getFullYear() - birthDate.getFullYear()) * oneYesr) / 1000;
     var month = today.getMonth() - birthDate.getMonth();
     if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
         minnutes--;
