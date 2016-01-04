@@ -17,8 +17,6 @@ function P(name, windowObject) {
     this.windowObject = windowObject;
 }
 
-var p;
-var span;
 var body = document.getElementsByTagName('body');
 
 var listOfP = [
@@ -47,38 +45,66 @@ var listOfP = [
     new P("isNaN: ", 'click here'),
 
     new P("Round numbers: ", 'click here'),
+
+    new P("Birthday: ", 'click here'),
+    new P("Minutes old: ", 'click here')
 ];
 
-//4.Add a stylesheet that displays the changed words in fat font and in red.
 for (var i = 0; i < listOfP.length; i++) {
-    p = document.createElement('p');
-    span = document.createElement('span');
+    addNewElement(listOfP[i]);
+}
+
+//4.Add a stylesheet that displays the changed words in fat font and in red.
+function addNewElement(listOfP) {
+    var p = document.createElement('p');
+    var span = document.createElement('span');
     span.style.color = 'red';
     span.style.fontWeight = 'bold';
 
-    if (listOfP[i].name === 'alert: ')
-        p.setAttribute('id', 'alertThis');
-    if (listOfP[i].name === 'open: ')
-        p.setAttribute('id', 'openThis');
-    if (listOfP[i].name === 'print: ')
-        p.setAttribute('id', 'printThis');
-    if (listOfP[i].name === 'last Modified: ')
-        p.setAttribute('id', 'lastModified');
-    if (listOfP[i].name === 'URL: ')
-        p.setAttribute('id', 'url');
-    if (listOfP[i].name === 'domain: ')
-        p.setAttribute('id', 'domain');
-    if (listOfP[i].name === 'array: ')
-        p.setAttribute('id', 'array');
-    if (listOfP[i].name === 'isNaN: ')
-        p.setAttribute('id', 'isNaN');
-    if (listOfP[i].name === 'Round numbers: ')
-        p.setAttribute('id', 'roundNumbers');
+    setAttributeOnElement(p, listOfP);
 
-    p.textContent = listOfP[i].name;
-    span.textContent = listOfP[i].windowObject;
+    p.textContent = listOfP.name;
+    span.textContent = listOfP.windowObject;
     body[0].appendChild(p);
     p.appendChild(span);
+}
+function setAttributeOnElement(p, listOfP) {
+    switch (true) {
+        case (listOfP.name === 'alert: '):
+            p.setAttribute('id', 'alertThis');
+            break;
+        case (listOfP.name === 'open: '):
+            p.setAttribute('id', 'openThis');
+            break;
+        case (listOfP.name === 'print: '):
+            p.setAttribute('id', 'printThis');
+            break;
+        case (listOfP.name === 'last Modified: '):
+            p.setAttribute('id', 'lastModified');
+            break;
+        case (listOfP.name === 'URL: '):
+            p.setAttribute('id', 'url');
+            break;
+        case (listOfP.name === 'domain: '):
+            p.setAttribute('id', 'domain');
+            break;
+        case (listOfP.name === 'array: '):
+            p.setAttribute('id', 'array');
+            break;
+        case (listOfP.name === 'isNaN: '):
+            p.setAttribute('id', 'isNaN');
+            break;
+        case (listOfP.name === 'Round numbers: '):
+            p.setAttribute('id', 'roundNumbers');
+            break;
+        case (listOfP.name === 'Birthday: '):
+            p.setAttribute('id', 'birthday');
+            break;
+        case (listOfP.name === 'Minutes old: '):
+            p.setAttribute('id', 'minutes');
+            break;
+        default:
+    }
 }
 
 //5. PLay with the Methods 
@@ -157,10 +183,10 @@ chechIfIsNaN.addEventListener('click', function (e) {
 10. Round one of the numbers in the paragraph up/down*/
 var originalNumber = '10.23456';
 var numbers = document.getElementById('roundNumbers');
-numbers.addEventListener('click', function(e){
-    alert('Number:' +originalNumber);
+numbers.addEventListener('click', function (e) {
+    alert('Number:' + originalNumber);
     alert('Math.ceil: ' + Math.ceil(originalNumber));
-    alert('Math.floor:' +Math.floor(originalNumber));
+    alert('Math.floor:' + Math.floor(originalNumber));
 
     //11. replace the 3rd word with PI then roud it to the nearest integer
     myArray[2] = Math.PI;
@@ -171,11 +197,17 @@ numbers.addEventListener('click', function(e){
 
 /*### Date object###
 12. Calculate how many days it's until your birthday and present it.*/
+var birthday = document.getElementById('birthday');
+
 var oneMinute = 60 * 1000;
 var oneHour = oneMinute * 60;
 var oneDay = oneHour * 24;
 var today = new Date();
 var oneYesr = oneDay * 365;
+
+birthday.addEventListener('click', function () {
+    getDaysUntilMyBirthday();
+});
 
 function getDaysUntilMyBirthday() {
     var birthday = new Date();
@@ -186,21 +218,25 @@ function getDaysUntilMyBirthday() {
         days = (today.getFullYear() + 1);
     else
         days = Math.round(Math.abs((today.getTime() - birthday.getTime()) / (oneDay)));
-    console.log("it is " + days + " days to my birthday");
+    alert("it is " + days + " days to my birthday");
 }
-getDaysUntilMyBirthday();
 
 //13. Calculate how many minutes old you are and present it.
-function getAge(dateString) {
+var minutes = document.getElementById('minutes');
+minutes.addEventListener('click', function () {
+    getAgeInMinutes("1992/11/17");
+});
+
+function getAgeInMinutes(dateString) {
     var birthDate = new Date(dateString);
     var minnutes = ((today.getFullYear() - birthDate.getFullYear()) * oneYesr) / 1000;
     var month = today.getMonth() - birthDate.getMonth();
     if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
         minnutes--;
     }
-    return minnutes;
+    alert('minnutes old: ' + minnutes);
 }
-console.log('minnutes old: ' + getAge("1992/11/17"));
+
 /*Bonus exercises:
 ### Demo page 141:###
 -Download the code to the book. Wipe the code from the js-file and rewrite it with the help from the book.
