@@ -8,30 +8,35 @@
           "productId": 0,
           "productName": "Cheeseburger",
           "price": 25,
+          "description": "Hamburger with cheese, beef, lettuce, tomato dressing and ketchup. Cheeseburger, what is there more to say than it is always good!",
           "image": "../exercise2/images/hamburger.png#"
         },
         {
           "productId": 1,
           "productName": "Hamburger",
           "price": 20,
+          "description": "Hamburger with beef, lettuce, tomato, dressing and ketchup. Original burgers for everyone!",
           "image": "../exercise2/images/hamburger.png#"
         },
         {
           "productId": 2,
           "productName": "Chicken burger",
           "price": 30,
+          "description": "Hamburger with cheese, chicken, lettuce, tomato, dressing and ketchup. The children's favorite, and the toy always included!",
           "image": "../exercise2/images/hamburger.png#"
         },
         {
           "productId": 3,
           "productName": "Bacon burger",
           "price": 35,
+          "description": "Hamburger with bacon, cheese, beef, lettuce, tomato, dressing and ketchup. Customers' favorite, at a great price!",
           "image": "../exercise2/images/hamburger.png#"
         },
         {
           "productId": 4,
           "productName": "Veggie burger",
           "price": 18,
+          "description": "Veggie burger with Quorn, lettuce, tomato, pickles, salad dressing and ketchup. Our veggie burger, is completely vegan! ",
           "image": "../exercise2/images/hamburger.png#"
         }
       ]
@@ -44,32 +49,37 @@
           "productId": 5,
           "productName": "Veggie sub",
           "price": 25,
+          "description": "Sub with lettuce, tomato, cucumber and cheese. The cheese is vegan, so our veggie sub is completely vegan!!",
           "image": "../exercise2/images/Subs.png#"
         },
         {
           "productId": 6,
           "productName": "Tuna sub",
           "price": 30,
+          "description": "Sub with tuna, lettuce, cucumber, tomato, onion and mayonnaise. Customers' favorite sub!",
           "image": "../exercise2/images/Subs.png#"
         },
         {
           "productId": 7,
           "productName": "Chicken sub",
           "price": 30,
+          "description": "Sub with chicken, lettuce, cucumber, tomato, onion and cheese. The children's favorite sub, and the toy always included!",
           "image": "../exercise2/images/Subs.png#"
         },
         {
           "productId": 8,
           "productName": "Roast Beef sub",
           "price": 35,
+          "description": "Sub with roast beef, lettuce, cucumber, tomato, onion and cheese. The perfect sub for all days of the week!",
           "image": "../exercise2/images/Subs.png#"
         },
         {
           "productId": 9,
           "productName": "Steak & Cheese sub",
           "price": 35,
+          "description": "Sub with steak, lettuce, cucumber, tomato, onion and cheese. Always appreciated!",
           "image": "../exercise2/images/Subs.png#"
-        },
+        }
       ]
     },
     {
@@ -80,30 +90,35 @@
           "productId": 10,
           "productName": "Mojito",
           "price": 75,
+          "description": "Drink with fresh mint, lime juice and white rum. Perfect for the party!",
           "image": "../exercise2/images/Drink.png#"
         },
         {
           "productId": 11,
           "productName": "Martini",
           "price": 90,
+          "description": "Drink with gin and dry vermouth. Perfect for the party!",
           "image": "../exercise2/images/Drink.png#"
         },
         {
           "productId": 12,
           "productName": "Beer",
           "price": 40,
+          "description": "Beer with tasteful cloudiness. Perfect for football evening with friends!",
           "image": "../exercise2/images/Drink.png#"
         },
         {
           "productId": 13,
           "productName": "Cider",
           "price": 55,
+          "description": "Pear Cider. Always a favorite!",
           "image": "../exercise2/images/Drink.png#"
         },
         {
           "productId": 14,
           "productName": "Wine",
           "price": 55,
+          "description": "Wine with the taste of summer. Perfect for girls night!",
           "image": "../exercise2/images/Drink.png#"
         }
       ]
@@ -116,30 +131,35 @@
           "productId": 15,
           "productName": "Kebab pizza",
           "price": 75,
+          "description": "Pizza with fresh tomato sauce, cheese, kebab meat, salad, cucumber, tomato, feferoni and garlic sauce. Customers' favorite pizza!",
           "image": "../exercise2/images/Pizza.png#"
         },
         {
           "productId": 16,
           "productName": "Tuna pizza",
           "price": 65,
+           "description": "Pizza with fresh tomato sauce, cheese, tuna, onion, pepper, salt and pepper.When you want to eat something from the sea",
           "image": "../exercise2/images/Pizza.png#"
         },
         {
           "productId": 17,
           "productName": "Mexicana pizza",
           "price": 60,
+          "description" :  "Pizza with fresh tomato sauce, cheese, ground beef , jalapeños, garlic, taco seasoning mix. For those who prefer spicy food.",
           "image": "../exercise2/images/Pizza.png#"
         },
         {
           "productId": 18,
           "productName": "Chicken pizza",
           "price": 65,
+          "description" : "Pizza with fresh tomato sauce, cheese, chicken, mushrooms and tomatoes. Perfect for lunch.",
           "image": "../exercise2/images/Pizza.png#"
         },
         {
           "productId": 19,
           "productName": "Bolognese pizza",
           "price": 55,
+          "description" : "Pizza with fresh tomato sauce, cheese, ground beef and eggs. The children's favorite pizza, and the toy always included!",
           "image": "../exercise2/images/Pizza.png#"
         }
       ]
