@@ -1,0 +1,22 @@
+﻿body {
+}
+
+header {
+    margin-top: 20px;
+    padding: 20px 10px 40px 10px ;
+    background: #ffffff url('../image/header.jpg');
+}
+.container-border {
+    box-shadow: 0 0 4px black;
+    margin: 20px auto;
+    background-color: white;
+}
+h1 {
+    font-size: 90px;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+    margin-bottom: 40px;
+}
+.search-control {
+    display: inline;
+}

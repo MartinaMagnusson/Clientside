@@ -9,14 +9,14 @@
           "productName": "Cheeseburger",
           "price": 25,
           "description": "Hamburger with cheese, beef, lettuce, tomato dressing and ketchup. Cheeseburger, what is there more to say than it is always good!",
-          "image": "../exercise2/images/hamburger.png#"
+          "image":  "image/Hamburger.png"
         },
         {
           "productId": 1,
           "productName": "Hamburger",
           "price": 20,
           "description": "Hamburger with beef, lettuce, tomato, dressing and ketchup. Original burgers for everyone!",
-          "image": "../exercise2/images/hamburger.png#"
+          "image": "image/Hamburger.png"
         },
         {
           "productId": 2,
