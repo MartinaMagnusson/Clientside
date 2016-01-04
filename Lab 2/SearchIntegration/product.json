@@ -1,0 +1,148 @@
+﻿{
+  "product": [
+    {
+      "id": 0,
+      "productType": "Hamburger",
+      "products": [
+        {
+          "productId": 0,
+          "productName": "Cheeseburger",
+          "price": 25,
+          "image": "../exercise2/images/hamburger.png#"
+        },
+        {
+          "productId": 1,
+          "productName": "Hamburger",
+          "price": 20,
+          "image": "../exercise2/images/hamburger.png#"
+        },
+        {
+          "productId": 2,
+          "productName": "Chicken burger",
+          "price": 30,
+          "image": "../exercise2/images/hamburger.png#"
+        },
+        {
+          "productId": 3,
+          "productName": "Bacon burger",
+          "price": 35,
+          "image": "../exercise2/images/hamburger.png#"
+        },
+        {
+          "productId": 4,
+          "productName": "Veggie burger",
+          "price": 18,
+          "image": "../exercise2/images/hamburger.png#"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "productType": "Sub",
+      "products": [
+        {
+          "productId": 5,
+          "productName": "Veggie sub",
+          "price": 25,
+          "image": "../exercise2/images/Subs.png#"
+        },
+        {
+          "productId": 6,
+          "productName": "Tuna sub",
+          "price": 30,
+          "image": "../exercise2/images/Subs.png#"
+        },
+        {
+          "productId": 7,
+          "productName": "Chicken sub",
+          "price": 30,
+          "image": "../exercise2/images/Subs.png#"
+        },
+        {
+          "productId": 8,
+          "productName": "Roast Beef sub",
+          "price": 35,
+          "image": "../exercise2/images/Subs.png#"
+        },
+        {
+          "productId": 9,
+          "productName": "Steak & Cheese sub",
+          "price": 35,
+          "image": "../exercise2/images/Subs.png#"
+        },
+      ]
+    },
+    {
+      "id": 2,
+      "productType": "Drink",
+      "products": [
+        {
+          "productId": 10,
+          "productName": "Mojito",
+          "price": 75,
+          "image": "../exercise2/images/Drink.png#"
+        },
+        {
+          "productId": 11,
+          "productName": "Martini",
+          "price": 90,
+          "image": "../exercise2/images/Drink.png#"
+        },
+        {
+          "productId": 12,
+          "productName": "Beer",
+          "price": 40,
+          "image": "../exercise2/images/Drink.png#"
+        },
+        {
+          "productId": 13,
+          "productName": "Cider",
+          "price": 55,
+          "image": "../exercise2/images/Drink.png#"
+        },
+        {
+          "productId": 14,
+          "productName": "Wine",
+          "price": 55,
+          "image": "../exercise2/images/Drink.png#"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "productType": "Pizza",
+      "products": [
+        {
+          "productId": 15,
+          "productName": "Kebab pizza",
+          "price": 75,
+          "image": "../exercise2/images/Pizza.png#"
+        },
+        {
+          "productId": 16,
+          "productName": "Tuna pizza",
+          "price": 65,
+          "image": "../exercise2/images/Pizza.png#"
+        },
+        {
+          "productId": 17,
+          "productName": "Mexicana pizza",
+          "price": 60,
+          "image": "../exercise2/images/Pizza.png#"
+        },
+        {
+          "productId": 18,
+          "productName": "Chicken pizza",
+          "price": 65,
+          "image": "../exercise2/images/Pizza.png#"
+        },
+        {
+          "productId": 19,
+          "productName": "Bolognese pizza",
+          "price": 55,
+          "image": "../exercise2/images/Pizza.png#"
+        }
+      ]
+    }
+  ]
+}

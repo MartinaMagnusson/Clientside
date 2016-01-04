@@ -20,6 +20,7 @@ function P(name, windowObject) {
 var body = document.getElementsByTagName('body');
 
 var listOfP = [
+    //window properties
     new P("inner height: ", window.innerHeight),
     new P("inner widthr: ", window.innerWidth),
     new P("page X offset: ", window.pageXOffset),
@@ -33,19 +34,20 @@ var listOfP = [
     new P("screen: ", window.screen),
     new P("screen width: ", window.screen.width),
     new P("screen height: ", window.screen.height),
+    //window methods
     new P("alert: ", 'click here'),
     new P("open: ", 'click here'),
     new P("print: ", 'click here'),
-
+    //DOM-properties
     new P("last Modified: ", 'click here'),
     new P("URL: ", 'click here'),
     new P("domain: ", 'click here'),
-
+    //String objects
     new P("array: ", 'click here'),
     new P("isNaN: ", 'click here'),
-
+    //Math
     new P("Round numbers: ", 'click here'),
-
+    //Date
     new P("Birthday: ", 'click here'),
     new P("Minutes old: ", 'click here')
 ];
@@ -68,6 +70,7 @@ function addNewElement(listOfP) {
     body[0].appendChild(p);
     p.appendChild(span);
 }
+
 function setAttributeOnElement(p, listOfP) {
     switch (true) {
         case (listOfP.name === 'alert: '):
@@ -171,6 +174,7 @@ array.addEventListener('click', function (e) {
 /*### String objects page 132: ###
 9. check if the 4th element in the array is a number*/
 var chechIfIsNaN = document.getElementById('isNaN');
+
 chechIfIsNaN.addEventListener('click', function (e) {
     if (isNaN(makeMeAnArray[4]))
         alert('4th element in the "We have burgers, subs, pizza, and drinks" is not a number');
@@ -183,6 +187,7 @@ chechIfIsNaN.addEventListener('click', function (e) {
 10. Round one of the numbers in the paragraph up/down*/
 var originalNumber = '10.23456';
 var numbers = document.getElementById('roundNumbers');
+
 numbers.addEventListener('click', function (e) {
     alert('Number:' + originalNumber);
     alert('Math.ceil: ' + Math.ceil(originalNumber));
@@ -197,13 +202,12 @@ numbers.addEventListener('click', function (e) {
 
 /*### Date object###
 12. Calculate how many days it's until your birthday and present it.*/
-var birthday = document.getElementById('birthday');
-
 var oneMinute = 60 * 1000;
 var oneHour = oneMinute * 60;
 var oneDay = oneHour * 24;
 var today = new Date();
 var oneYesr = oneDay * 365;
+var birthday = document.getElementById('birthday');
 
 birthday.addEventListener('click', function () {
     getDaysUntilMyBirthday();
@@ -223,6 +227,7 @@ function getDaysUntilMyBirthday() {
 
 //13. Calculate how many minutes old you are and present it.
 var minutes = document.getElementById('minutes');
+
 minutes.addEventListener('click', function () {
     getAgeInMinutes("1992/11/17");
 });
