@@ -1,6 +1,33 @@
 ﻿$(function () {
+    $.getJSON('product.json', function (data) {
+        var output = "";
+        $.each(data.product, function (key, val) {
+                output += " <h2 class='text-center'>" + val.productType + " </h2>";
+                $.each(val.products, function (productKey, productVal) {
+                    output += "<article class='col-sm-12'><fieldset>";
+                    output += " <legend>" + productVal.day + " " + val.productType + " </legend>";
+                    output += "<div class='col-sm-8'>";
+                    output += "<h3>" + productVal.productName + "</h3>";
+                    output += "<p>" + productVal.description + "</p>";
+                    output += "<p>" + productVal.price + "kr</p>";
+                    output += "</div>";
+                    output += "<div class='col-sm-4'>";
+                    output += "<img src=" + productVal.image + '"/>';
+                    output += "</div>";
+                    output += "</article></fieldset>";
+                });
+            $('#menuPlace').html(output);
+        });
+    });
+
+    $('button').on('click', function () {
+        $('#menuPlace').innerHTML = "";
+        var productType = $(this).text();
+        filterOnProduct(productType);
+    });
     $('#search').keyup(function () {
-        var searchField = $('#search').val();
+        $('#menuPlace').innerHTML = "";
+        var searchField = $(this).val();
         var regex = new RegExp(searchField, "i");
         $.getJSON('product.json', function (data) {
             var output = "";
@@ -25,8 +52,60 @@
                 $('#menuPlace').html(output);
             });
         });
+
     });
 });
+
+function filterOnProduct(type) {
+    $.getJSON('product.json', function (data) {
+        var output = "";
+        $.each(data.product, function (key, val) {
+            if (val.productType === type) {
+                output += " <h2 class='text-center'>" + val.productType + " </h2>";
+                $.each(val.products, function (productKey, productVal) {
+                    output += "<article class='col-sm-12'><fieldset>";
+                    output += " <legend>" + productVal.day + " " + val.productType + " </legend>";
+                    output += "<div class='col-sm-8'>";
+                    output += "<h3>" + productVal.productName + "</h3>";
+                    output += "<p>" + productVal.description + "</p>";
+                    output += "<p>" + productVal.price + "kr</p>";
+                    output += "</div>";
+                    output += "<div class='col-sm-4'>";
+                    output += "<img src=" + productVal.image + '"/>';
+                    output += "</div>";
+                    output += "</article></fieldset>";
+                });
+            }
+            $('#menuPlace').html(output);
+        });
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //function getProductType(productType, output) {
 //    switch (true) {
@@ -102,4 +181,3 @@
 //        default:
 //    }
 //}
-//request.send();
