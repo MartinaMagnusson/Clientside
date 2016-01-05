@@ -93,8 +93,12 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <None Include="Scripts\jquery-2.1.0-vsdoc.js" />
+    <Content Include="image\Drink.png" />
+    <Content Include="image\Hamburger.png" />
     <Content Include="image\header.jpg" />
+    <Content Include="image\Pizza.png" />
     <Content Include="image\regnbågensfärger.jpg" />
+    <Content Include="image\Subs.PNG" />
     <Content Include="Index.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

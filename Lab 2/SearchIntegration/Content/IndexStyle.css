@@ -4,7 +4,7 @@
 header {
     margin-top: 20px;
     padding: 20px 10px 40px 10px ;
-    background: #ffffff url('../image/header.jpg');
+    /*background: #ffffff url('../image/header.jpg');*/
 }
 .container-border {
     box-shadow: 0 0 4px black;
@@ -19,4 +19,16 @@ h1 {
 }
 .search-control {
     display: inline;
+}
+article {
+    padding: 10px 20px;
+    margin-bottom: 10px; 
+    border-bottom: 1px dotted gray;
+    height: 200px;
+    overflow: hidden;
+}
+
+img {
+    width: 200px;
+    border-radius: 10px;
 }
