@@ -3,27 +3,58 @@
 
 header {
     margin-top: 20px;
-    padding: 20px 10px 40px 10px ;
+    padding: 20px 10px 40px 10px;
     background: #ffffff url('../image/header.jpg');
 }
+
 .container-border {
     box-shadow: 0 0 4px black;
     margin: 20px auto;
     background-color: white;
 }
+
 h1 {
     font-size: 90px;
     color: white;
     text-shadow: 1px 1px 4px black;
     margin-bottom: 40px;
 }
-.search-control {
-    display: inline;
+
+#search-text {
+    color: white;
+    text-shadow: 0.5px 0.5px 4px black;
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 0;
+    margin-bottom: 7px;
 }
+
+h2 {
+    color: #6E7EF9;
+    font: bold 50px arial;
+}
+
+h3 {
+    color: orange;
+    font: bold 30px arial;
+}
+
+legend {
+    padding: 10px 10px 0 10px;
+    margin-bottom: 5px;
+    color: palevioletred;
+    font: bold 16px arial;
+    border-bottom: 0;
+}
+
+button, #search-group {
+    margin-bottom: 8px !important;
+}
+
 article {
-    padding: 10px 20px;
-    margin-bottom: 10px; 
-    border-bottom: 1px dotted gray;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px dashed gray;
     height: 150px;
     overflow: hidden;
     -webkit-animation: test 1.5s;
@@ -38,19 +69,26 @@ article {
     transition: height 0.3s ease-in-out;
 }
 
-article:hover {
-    height: 250px;
-    min-height: 150px;
-}
+    article:hover {
+        height: 250px;
+        min-height: 150px;
+    }
 
 img {
     height: 150px;
     border-radius: 10px;
 }
+
+.price {
+    color: orange;
+    font: bold 20px arial;
+}
+
 @-moz-keyframes test {
     0% {
         opacity: 0.3;
     }
+
     100% {
         opacity: 1;
     }
@@ -60,6 +98,7 @@ img {
     0% {
         opacity: 0.3;
     }
+
     100% {
         opacity: 1;
     }
@@ -69,6 +108,7 @@ img {
     0% {
         opacity: 0.3;
     }
+
     100% {
         opacity: 1;
     }
