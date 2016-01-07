@@ -65,14 +65,14 @@
           "image": "image/Subs.png#"
         },
         {
-          "productName": "Roast Beef sub",
+          "productName": "Beef sub",
           "day": "Thursday",
           "price": 35,
           "description": "Sub with roast beef, lettuce, cucumber, tomato, onion and cheese. The perfect sub for all days of the week!",
           "image": "image/Subs.png#"
         },
         {
-          "productName": "Steak & Cheese sub",
+          "productName": "Steak sub",
           "day": "Friday",
           "price": 35,
           "description": "Sub with steak, lettuce, cucumber, tomato, onion and cheese. Always appreciated!",

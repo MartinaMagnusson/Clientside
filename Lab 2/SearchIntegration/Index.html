@@ -18,23 +18,30 @@
                     <p id="search-text">Search in our menu</p>
                     <div class="input-group" id="search-group">
                         <span class="input-group-addon" id="search-addon">Search</span>
-                        <input type="text" id="search" placeholder="search" class="form-control" aria-describedby="search-addon"/>
+                        <input type="search" id="search" placeholder="search" class="form-control" aria-describedby="search-addon" />
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    <label for="hamburger">Hamburger</label>
-                    <input class="category" id="hamburger" type="checkbox" value="Hamburger" /><br/>
-                    <label for="sub">Sub</label>
-                    <input class="category" id="sub" type="checkbox" value="Sub" />
+                <div class="col-sm-3 list-group">
+                    <label class="list-group-item" for="hamburger">
+                        Hamburger
+                        <input class="category pull-right" id="hamburger" checked="checked" type="checkbox" value="Hamburger" />
+                    </label>
+                    <label class="list-group-item" for="sub">
+                        Sub
+                        <input class="category pull-right" id="sub" checked="checked" type="checkbox" value="Sub" />
+                    </label>
                 </div>
-
-                <div class="col-sm-3">
-                    <label for="drink">Drink</label>
-                    <input class="category" id="drink" type="checkbox" value="Drink"/><br/>
-                    <label for="pizza">Pizza</label>
-                    <input class="category" id="pizza" type="checkbox"value="Pizza"/>
+                <div class="col-sm-3 list-group">
+                    <label class="list-group-item" for="drink">
+                        Drink
+                        <input class="category pull-right" id="drink" checked="checked" type="checkbox" value="Drink" />
+                    </label>
+                    <label class="list-group-item" for="pizza">
+                        Pizza
+                        <input class="category pull-right" id="pizza" checked="checked" type="checkbox" value="Pizza" />
+                    </label>
                 </div>
-                </div>
+            </div>
         </header>
         <div id="menuPlace">
         </div>

@@ -4,7 +4,7 @@
 header {
     margin-top: 20px;
     padding: 20px 10px 40px 10px;
-    /*background: #ffffff url('../image/header.jpg');*/
+    background: #ffffff url('../image/header.jpg');
 }
 
 .container-border {
@@ -35,7 +35,7 @@ h2 {
 }
 
 h3 {
-    /*color: orange;*/
+    color: orange;
     font: bold 30px arial;
 }
 
