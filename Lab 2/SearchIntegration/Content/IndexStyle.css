@@ -57,11 +57,11 @@ article {
     border: 1px dashed gray;
     height: 150px;
     overflow: hidden;
-    -webkit-animation: test 1.5s;
-    -moz-animation: test 1.5s;
-    -ms-animation: test 1.5s;
-    -o-animation: test 1.5s;
-    animation: test 1.5s;
+    -webkit-animation: changeHeight 1.5s;
+    -moz-animation: changeHeight 1.5s;
+    -ms-animation: changeHeight 1.5s;
+    -o-animation: changeHeight 1.5s;
+    animation: changeHeight 1.5s;
     -webkit-transition: height 0.3s ease-in-out;
     -moz-transition: height 0.3s ease-in-out;
     -ms-transition: height 0.3s ease-in-out;
@@ -84,7 +84,7 @@ img {
     font: bold 20px arial;
 }
 
-@-moz-keyframes test {
+@-moz-keyframes changeHeight {
     0% {
         opacity: 0.3;
     }
@@ -94,7 +94,7 @@ img {
     }
 }
 
-@-webkit-keyframes test {
+@-webkit-keyframes changeHeight {
     0% {
         opacity: 0.3;
     }
@@ -104,7 +104,7 @@ img {
     }
 }
 
-@keyframes test {
+@keyframes changeHeight {
     0% {
         opacity: 0.3;
     }

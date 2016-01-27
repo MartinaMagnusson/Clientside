@@ -1,9 +1,12 @@
 ﻿$(function () {
     createProducts();
-    if ($('#search').value === "" || $('#search').value === null || $('#search').value === " ")
+    if (String($('#search').value).trim() == "" || $('#search').value == null) {
+        $('h2').remove();
+        $('article').remove();
         createProducts();
-
-    $('.category').on('click', function () {
+    }
+       
+    $('.category').on("click", function () {
         var searchField = $('#search').val();
         var regex = new RegExp(searchField, "i");
         $('h2').remove();
